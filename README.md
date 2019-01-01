@@ -1,11 +1,8 @@
 
-Example Usage
-...
-        view.addSubview(redView)
-        view.addSubview(blueView)
-        view.addSubview(greenView)
-        view.addSubview(yellowView)
-        
+# Example Usage
+
+```
+
         redView.layout { (layoutProxy) in
             layoutProxy.height.equal(toConstant: 100).priority = .required
             layoutProxy.top == view.safeTopAnchor
@@ -33,4 +30,5 @@ Example Usage
             layoutProxy.centerX == view.centerXAnchor
             layoutProxy.centerY == view.centerYAnchor
         }
-...
+
+```
