@@ -1,7 +1,6 @@
-A DSL library of working with auto layout in swift in a simpler and safer way
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+
+Example Usage
+...
         view.addSubview(redView)
         view.addSubview(blueView)
         view.addSubview(greenView)
@@ -34,5 +33,4 @@ A DSL library of working with auto layout in swift in a simpler and safer way
             layoutProxy.centerX == view.centerXAnchor
             layoutProxy.centerY == view.centerYAnchor
         }
-    
-    }
+...
