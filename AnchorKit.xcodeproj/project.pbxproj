@@ -14,6 +14,9 @@
 		630B3FDD21D4320F00D5EFFC /* NSLayoutConstraint+activate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B3FDC21D4320F00D5EFFC /* NSLayoutConstraint+activate.swift */; };
 		630B3FDF21D432C500D5EFFC /* UIView+LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B3FDE21D432C500D5EFFC /* UIView+LayoutProxy.swift */; };
 		630B3FE121D433B400D5EFFC /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B3FE021D433B400D5EFFC /* Operators.swift */; };
+		634909F522230D24003BA1C5 /* UIView+convenienceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634909F422230D24003BA1C5 /* UIView+convenienceHelpers.swift */; };
+		634909F722230D46003BA1C5 /* UIView+safeAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634909F622230D46003BA1C5 /* UIView+safeAnchors.swift */; };
+		634909F922230D5C003BA1C5 /* UIView+autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634909F822230D5C003BA1C5 /* UIView+autolayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		630B3FDC21D4320F00D5EFFC /* NSLayoutConstraint+activate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+activate.swift"; sourceTree = "<group>"; };
 		630B3FDE21D432C500D5EFFC /* UIView+LayoutProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutProxy.swift"; sourceTree = "<group>"; };
 		630B3FE021D433B400D5EFFC /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		634909F422230D24003BA1C5 /* UIView+convenienceHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+convenienceHelpers.swift"; sourceTree = "<group>"; };
+		634909F622230D46003BA1C5 /* UIView+safeAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+safeAnchors.swift"; sourceTree = "<group>"; };
+		634909F822230D5C003BA1C5 /* UIView+autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+autolayout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 				630B3FDA21D4303300D5EFFC /* LayoutProxy.swift */,
 				630B3FDC21D4320F00D5EFFC /* NSLayoutConstraint+activate.swift */,
 				630B3FDE21D432C500D5EFFC /* UIView+LayoutProxy.swift */,
+				634909F822230D5C003BA1C5 /* UIView+autolayout.swift */,
+				634909F622230D46003BA1C5 /* UIView+safeAnchors.swift */,
+				634909F422230D24003BA1C5 /* UIView+convenienceHelpers.swift */,
 				630B3FE021D433B400D5EFFC /* Operators.swift */,
 				630B3FCF21D42EE900D5EFFC /* Info.plist */,
 			);
@@ -150,8 +159,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				630B3FDD21D4320F00D5EFFC /* NSLayoutConstraint+activate.swift in Sources */,
+				634909F522230D24003BA1C5 /* UIView+convenienceHelpers.swift in Sources */,
 				630B3FD921D4300700D5EFFC /* LayoutProperty.swift in Sources */,
 				630B3FD721D42F0400D5EFFC /* LayoutAnchor.swift in Sources */,
+				634909F922230D5C003BA1C5 /* UIView+autolayout.swift in Sources */,
+				634909F722230D46003BA1C5 /* UIView+safeAnchors.swift in Sources */,
 				630B3FDB21D4303300D5EFFC /* LayoutProxy.swift in Sources */,
 				630B3FDF21D432C500D5EFFC /* UIView+LayoutProxy.swift in Sources */,
 				630B3FE121D433B400D5EFFC /* Operators.swift in Sources */,

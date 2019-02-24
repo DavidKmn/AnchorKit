@@ -54,7 +54,3 @@ public func *<A: LayoutDimensionAnchor>(lhs: A,
 public func ==<A: LayoutDimensionAnchor>(lhs: LayoutProperty<A>, rhs: CGFloat) {
     lhs.equal(toConstant: rhs)
 }
-
-public func with<A: LayoutDimensionAnchor>(lhs: A, priority: UILayoutPriority) {
-    
-}
