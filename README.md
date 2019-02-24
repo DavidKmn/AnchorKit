@@ -40,7 +40,7 @@
 Add the following entry to your Podfile:
 
 ```
-pod 'AnchorKit', :git => 'https://github.com/DavidKmn/AnchorKit.git', :tag => '0.0.3'
+pod 'AnchorKit', :git => 'https://github.com/DavidKmn/AnchorKit.git', :tag => '0.0.5'
 ```
 
 Then run pod install.
