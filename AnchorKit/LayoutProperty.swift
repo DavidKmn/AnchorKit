@@ -18,40 +18,53 @@ public struct LayoutProperty<Anchor: LayoutAnchor> {
 
 extension LayoutProperty where Anchor: LayoutDimensionAnchor {
     @discardableResult
-    public func equal(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0, multiplyBy multiplier: CGFloat = 1.0) -> NSLayoutConstraint {
-        return anchor.constraint(equalTo: otherAnchor, multiplier: multiplier, constant: constant).activate()
+    public func equal(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0, multiplyBy multiplier: CGFloat = 1.0, withPriority priority: AnchorPriority = .required) -> NSLayoutConstraint {
+        let constraint = anchor.constraint(equalTo: otherAnchor, multiplier: multiplier, constant: constant)
+        constraint.priority = priority.layoutPriority
+        return constraint.activate()
     }
     
     @discardableResult
-    public func greaterThanOrEqual(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0, multiplyBy multiplier: CGFloat = 1.0) -> NSLayoutConstraint {
-        return anchor.constraint(greaterThanOrEqualTo: otherAnchor, multiplier: multiplier, constant: constant).activate()
+    public func greaterThanOrEqual(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0, multiplyBy multiplier: CGFloat = 1.0, withPriority priority: AnchorPriority = .required) -> NSLayoutConstraint {
+        let constraint = anchor.constraint(greaterThanOrEqualTo: otherAnchor, multiplier: multiplier, constant: constant)
+        constraint.priority = priority.layoutPriority
+        return constraint.activate()
     }
     
     @discardableResult
-    public func lessThanOrEqual(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0, multiplyBy multiplier: CGFloat = 1.0) -> NSLayoutConstraint {
-        return anchor.constraint(lessThanOrEqualTo: otherAnchor, multiplier: multiplier, constant: constant).activate()
+    public func lessThanOrEqual(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0, multiplyBy multiplier: CGFloat = 1.0, withPriority priority: AnchorPriority = .required) -> NSLayoutConstraint {
+        let constraint = anchor.constraint(lessThanOrEqualTo: otherAnchor, multiplier: multiplier, constant: constant)
+        constraint.priority = priority.layoutPriority
+        return constraint.activate()
     }
     
     @discardableResult
-    public func equal(toConstant constant: CGFloat) -> NSLayoutConstraint {
-        return anchor.constraint(equalToConstant: constant).activate()
+    public func equal(toConstant constant: CGFloat, withPriority priority: AnchorPriority = .required) -> NSLayoutConstraint {
+        let constraint = anchor.constraint(equalToConstant: constant)
+        constraint.priority = priority.layoutPriority
+        return constraint.activate()
     }
 }
 
 extension LayoutProperty where Anchor: LayoutAnchor {
-    
     @discardableResult
-    public func equal(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0) -> NSLayoutConstraint {
-        return anchor.constraint(equalTo: otherAnchor, constant: constant).activate()
+    public func equal(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0, withPriority priority: AnchorPriority = .required) -> NSLayoutConstraint {
+        let constraint = anchor.constraint(equalTo: otherAnchor, constant: constant)
+        constraint.priority = priority.layoutPriority
+        return constraint.activate()
     }
 
     @discardableResult
-    public func greaterThanOrEqual(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0) -> NSLayoutConstraint {
-        return anchor.constraint(greaterThanOrEqualTo: otherAnchor, constant: constant).activate()
+    public func greaterThanOrEqual(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0, withPriority priority: AnchorPriority = .required) -> NSLayoutConstraint {
+        let constraint = anchor.constraint(greaterThanOrEqualTo: otherAnchor, constant: constant)
+        constraint.priority = priority.layoutPriority
+        return constraint.activate()
     }
 
     @discardableResult
-    public func lessThanOrEqual(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0) -> NSLayoutConstraint {
-        return anchor.constraint(greaterThanOrEqualTo: otherAnchor, constant: constant).activate()
+    public func lessThanOrEqual(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0, withPriority priority: AnchorPriority = .required) -> NSLayoutConstraint {
+        let constraint = anchor.constraint(greaterThanOrEqualTo: otherAnchor, constant: constant)
+        constraint.priority = priority.layoutPriority
+        return constraint.activate()
     }
 }

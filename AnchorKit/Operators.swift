@@ -16,33 +16,40 @@ public func -<A: LayoutAnchor>(lhs: A, rhs: CGFloat) -> (A, CGFloat) {
     return (lhs, -rhs)
 }
 
-public func ==<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: (A, CGFloat)) {
-    lhs.equal(to: rhs.0, offsetBy: rhs.1)
+@discardableResult
+public func ==<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: (A, CGFloat)) -> NSLayoutConstraint {
+    return lhs.equal(to: rhs.0, offsetBy: rhs.1)
 }
 
-public func ==<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: A) {
-    lhs.equal(to: rhs)
+@discardableResult
+public func ==<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: A) -> NSLayoutConstraint {
+    return lhs.equal(to: rhs)
 }
 
-public func >=<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: (A, CGFloat)) {
-    lhs.greaterThanOrEqual(to: rhs.0, offsetBy: rhs.1)
+@discardableResult
+public func >=<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: (A, CGFloat)) -> NSLayoutConstraint {
+    return lhs.greaterThanOrEqual(to: rhs.0, offsetBy: rhs.1)
 }
 
-public func >=<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: A) {
-    lhs.greaterThanOrEqual(to: rhs)
+@discardableResult
+public func >=<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: A) -> NSLayoutConstraint {
+    return lhs.greaterThanOrEqual(to: rhs)
 }
 
+@discardableResult
 public func <=<A: LayoutAnchor>(lhs: LayoutProperty<A>,
-                         rhs: (A, CGFloat)) {
-    lhs.lessThanOrEqual(to: rhs.0, offsetBy: rhs.1)
+                         rhs: (A, CGFloat)) -> NSLayoutConstraint {
+    return lhs.lessThanOrEqual(to: rhs.0, offsetBy: rhs.1)
 }
 
-public func <=<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: A) {
-    lhs.lessThanOrEqual(to: rhs)
+@discardableResult
+public func <=<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: A) -> NSLayoutConstraint {
+    return lhs.lessThanOrEqual(to: rhs)
 }
 
-public func ==<A: LayoutDimensionAnchor>(lhs: LayoutProperty<A>, rhs: (A, CGFloat)) {
-        lhs.equal(to: rhs.0, multiplyBy: rhs.1)
+@discardableResult
+public func ==<A: LayoutDimensionAnchor>(lhs: LayoutProperty<A>, rhs: (A, CGFloat)) -> NSLayoutConstraint {
+        return lhs.equal(to: rhs.0, multiplyBy: rhs.1)
 }
 
 /// button.heightAnchor == view.heightAnchor * 0.3
@@ -51,6 +58,7 @@ public func *<A: LayoutDimensionAnchor>(lhs: A,
     return (lhs, rhs)
 }
 
-public func ==<A: LayoutDimensionAnchor>(lhs: LayoutProperty<A>, rhs: CGFloat) {
-    lhs.equal(toConstant: rhs)
+@discardableResult
+public func ==<A: LayoutDimensionAnchor>(lhs: LayoutProperty<A>, rhs: CGFloat) -> NSLayoutConstraint {
+    return lhs.equal(toConstant: rhs)
 }
