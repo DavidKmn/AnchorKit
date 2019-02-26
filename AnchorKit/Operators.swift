@@ -37,6 +37,11 @@ public func >=<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: A) -> NSLayoutConst
 }
 
 @discardableResult
+public func >=<A: LayoutDimensionAnchor>(lhs: LayoutProperty<A>, rhs: CGFloat) -> NSLayoutConstraint {
+    return lhs.greaterThanOrEqual(toConstant: rhs)
+}
+
+@discardableResult
 public func <=<A: LayoutAnchor>(lhs: LayoutProperty<A>,
                          rhs: (A, CGFloat)) -> NSLayoutConstraint {
     return lhs.lessThanOrEqual(to: rhs.0, offsetBy: rhs.1)
@@ -46,6 +51,12 @@ public func <=<A: LayoutAnchor>(lhs: LayoutProperty<A>,
 public func <=<A: LayoutAnchor>(lhs: LayoutProperty<A>, rhs: A) -> NSLayoutConstraint {
     return lhs.lessThanOrEqual(to: rhs)
 }
+
+@discardableResult
+public func <=<A: LayoutDimensionAnchor>(lhs: LayoutProperty<A>, rhs: CGFloat) -> NSLayoutConstraint {
+    return lhs.lessThanOrEqual(toConstant: rhs)
+}
+
 
 @discardableResult
 public func ==<A: LayoutDimensionAnchor>(lhs: LayoutProperty<A>, rhs: (A, CGFloat)) -> NSLayoutConstraint {

@@ -44,6 +44,20 @@ extension LayoutProperty where Anchor: LayoutDimensionAnchor {
         constraint.priority = priority.layoutPriority
         return constraint.activate()
     }
+    
+    @discardableResult
+    public func greaterThanOrEqual(toConstant constant: CGFloat, withPriority priority: AnchorPriority = .required) -> NSLayoutConstraint {
+        let constraint = anchor.constraint(greaterThanOrEqualToConstant: constant)
+        constraint.priority = priority.layoutPriority
+        return constraint.activate()
+    }
+    
+    @discardableResult
+    public func lessThanOrEqual(toConstant constant: CGFloat, withPriority priority: AnchorPriority = .required) -> NSLayoutConstraint {
+        let constraint = anchor.constraint(lessThanOrEqualToConstant: constant)
+        constraint.priority = priority.layoutPriority
+        return constraint.activate()
+    }
 }
 
 extension LayoutProperty where Anchor: LayoutAnchor {
